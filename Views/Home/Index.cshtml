@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<br>
+<center><img src="/images/icon.png"></center>
+<br>
+<form id="searchForm">
+    <div class="text-center">
+        <div class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s9">
+                        <i class="material-icons prefix">textsms</i>
+                        <input type="text" id="autocomplete-input" class="autocomplete">
+                        <label for="autocomplete-input">Search</label>
+                    </div>
+                    <div class="col s3">
+                        <button class="btn waves-effect waves-light yellow lighten-4" type="submit" name="action">Search
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Which fields should we search in? (You can choose multiple)</p>
+                    <div class="col s3">
+                        <p>
+                            <label>
+                                <input type="checkbox" id="title"/>
+                                <span>Title</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s3">
+                        <p>
+                            <label>
+                                <input type="checkbox" id="body"/>
+                                <span>Body</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s3">
+                        <p>
+                            <label>
+                                <input type="checkbox" id="tags"/>
+                                <span>Tags</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col s3">
+                        <p>
+                            <label>
+                                <input type="checkbox" id="comments"/>
+                                <span>Comments</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s1"></div>
+            <div class="col s10">
+                <div id="results" class="card-panel white">
+
+                </div><br/>
+                <a href="10" class="btn waves-effect waves-light yellow lighten-4" id="nextPage">Next</a>
+            </div>""
+        </div>
+    </div>
+</form>

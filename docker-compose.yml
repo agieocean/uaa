@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  solr:
+    image: solr
+    container_name: solr
+    #ports:
+    # - "8983:8983"
+    volumes:
+      - ./questions_json:/var/solr/data
+    command:
+      - solr-precreate
+      - gettingstarted
+  uaa:
+    image: mcr.microsoft.com/dotnet/sdk:7.0
+    container_name: uaa
+    ports:
+      - "5177:5177"
+      - "7176:7176"
+    volumes:
+      - ./:/app
+    depends_on:
+      - solr
+    working_dir: "/app"
+    entrypoint: ["dotnet","watch","run"]

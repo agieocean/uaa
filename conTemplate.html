@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <div>
+        <div>{{ questionTitle }}</div>
+        <div>{{ questionBody }}</div>
+    </div>
+    {% for reply in replies %}
+    <div>{{ reply }}</div>
+    {% endfor %}
+    {% for tag in tags %}
+    <a href="/tags/{{ tag }}">
+        {{ tag }}
+    </a>
+    {% endfor %}
+</body>
+</html>
